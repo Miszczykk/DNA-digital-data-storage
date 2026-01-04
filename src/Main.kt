@@ -43,12 +43,12 @@ class DecodingDNAToString(val DNAToDecoding: String){
 
         var previousChar = 'A'
 
-        for(nucleotid in DNAToDecoding){
+        for(nucleotide in DNAToDecoding){
             val encodingRule = encodingRules[previousChar]!!
 
-            val newChar = encodingRule.indexOf(nucleotid)
+            val newChar = encodingRule.indexOf(nucleotide)
             result.append(newChar)
-            previousChar = nucleotid
+            previousChar = nucleotide
         }
         return result.toString()
     }
